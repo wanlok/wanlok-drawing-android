@@ -11,22 +11,22 @@ import com.wanlok.drawing.NavigationFragment
 
 class A1Fragment : NavigationFragment() {
     //    private var presenter: B1Presenter? = null
-    private var textView: TextView? = null
+
+    private lateinit var drawingView: DrawingView
+
 
     override fun getTitle(): String {
         return "A1Fragment"
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_a1, null) as ViewGroup
 //        presenter = B1Presenter()
-        textView = root.findViewById<TextView>(R.id.textView)
-//        button.setOnClickListener(View.OnClickListener { })
+
+        drawingView = root.findViewById(R.id.drawing_view)
+
         return root
     }
+
 }
 
